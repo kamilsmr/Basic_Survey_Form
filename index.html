@@ -4,66 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
 </head>
 <body>
+
     <div id="container">
-        <div id="title">
-            <h1>Survey Form</h1>
-        </div>
-        <div id="description">
-            <h3>Thank you for taking the time to help s improve the platform</h3>
-        </div>
-            <form action="result.html">
-                <label for="name">Name</label><br>
-                <input type="text" name="name" id="name" placeholder="Enter your name"><br><br>
-                <label for="surname">Surname</label><br>
-                <input type="text" name="surname" id="surname" placeholder="Enter your surname"><br><br>
-                <label for="mail">Email</label><br>
-                <input type="email" name="email" id="mail" placeholder="user@clarusway.com"><br><br>
-                <p style="font-size: 20px; font-weight: bold;"><label for="role">Which option best describes your current role?</label></p>
-                <select name="current role" id="role">
-                    <option value="none" selected disabled hidden>Select current role</option>
-                    <option value="student">student</option>
-                    <option value="teacher">teacher</option>
-                    <option value="full time job">full time job</option>
-                    <option value="part time job">part time job</option>
-                    <option value="full time learner">full time learner</option>
-                    <option value="prefer not to say">prefer not to say</option>
-                </select>
-                <h3>Would you recommend Clarusway to a friend?</h3>
-                <input type="radio" name="recommend" id="rb1" value="yes" checked>
-                <label for="rb1">Definitely, Yes</label><br><br>
-                <input type="radio" name="recommend" id="rb2" value="maybe">
-                <label for="rb2">Maybe</label><br><br>
-                <input type="radio" name="recommend" id="rb3" value="not sure">
-                <label for="rb3">Not sure</label><br><br>
-                <input type="radio" name="recommend" id="rb4" value="no">
-                <label for="rb4">Definitely, No</label><br><br>
-                <h3>What is your favorite feature of Clarusway?</h3><br>
-                <select name="feature" id="feature">
-                    <option value="none" selected disabled hidden>Select an option</option>
-                    <option value="courses">courses</option>
-                    <option value="projects">projects</option>
-                    <option value="community">community</option>
-                    <option value="mentors">mentors</option>
-                </select><br>
-                <h3>What would you like to see improved? (Check all that apply)</h3>
-                <input type="checkbox" value="frontend" id="cb1" name="improved">
-                <label for="cb1">Front-end Projects</label><br>
-                <input type="checkbox" value="backend" id="cb2" name="improved">
-                <label for="cb2">Back-end Projects</label><br>
-                <input type="checkbox" value="data science" id="cb3" name="improved">
-                <label for="cb3">Data Science</label><br>
-                <input type="checkbox" value="additional courses" id="cb4" name="improved" checked>
-                <label for="cb4">Additional Courses</label><br><br>
-                <label for="comment">Any comments or suggestions?</label><br>
-                <textarea name="comment" id="comment" cols="10" rows="3" placeholder="Enter your comment here... Thanks for comments...."></textarea>
-                <input type="submit" name="submit" id="submit" value="Submit">
+        <header id="header">
+            <h1 id="title">NET<span>FLIX</span></h1>
+            <h3 id="description">Thank you for signing up to Netflix.Tell me more about yourself.</h3>
+        </header>
+        <section id="survey-form-container">
+
+            <form action="result.html" method="get">
+
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                    <label for="age">Age</label>
+                    <br>
+                    <input type="number" id="age" name="age" placeholder="Age">
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="input-box">
+                    <label for="content">Content Type</label>
+                    <br>
+
+                    <select name="content" id="dropdown">
+                        <option value="movie">Movies</option>
+                        <option value="series" selected>Series</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+
+                    <label for="">Movie Type</label>
+                    <br>
+                    <input type="checkbox" name="movie" id="first-check" value="Comedy" checked>
+                    <label for="first-check" >Comedy</label>
+                    <br>
+                    <input type="checkbox" name="movie" id="second-check" value="Action">
+                    <label for="second-check">Action</label>
+                    <br>
+                    <input type="checkbox" name="movie" id="third-check" value="Romance" checked>
+                    <label for="third-check">Romance</label>
+                </div>
+
+                <div class="input-box">
+                    <label>Gender</label>
+                    <br>
+                    <input type="radio" name="gender" id="first-radio" value="Male">
+                    <label for="first-radio">Male</label>
+                    <br>
+                    <input type="radio" name="gender" id="second-radio" value="Female" checked>
+                    <label for="second-radio">Female</label>
+                    <br>
+                    <input type="radio" name="gender" id="third-radio" value="Other">
+                    <label for="third-radio">Other</label>
+                </div>
+                <div class="input-box">
+                    <label for="feedback">Feedback</label>
+                    <br>
+                    <textarea name="feedback" id="feedback" cols="30" rows="5" placeholder="any comment"></textarea>
+
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" id="form-button">Send</button>
+                </div>
+
+
+
+
+
             </form>
-        <div id="form">
-        </div>
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
     </div>
+
+    
 </body>
 </html>
